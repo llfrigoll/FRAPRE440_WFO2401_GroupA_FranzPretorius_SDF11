@@ -14,22 +14,27 @@
 
 <body class="bg-gray-100">
     <div class="mx-auto bg-white">
-        <!-- Main container with navigation and header content -->
+        <!-- MAIN CLASS FOR HEADER AND NAV -->
         <div class="relative flex flex-wrap items-center justify-between w-full bg-white py-7 shrink-0">
             <div class="px-4">
                 <img src="assets\component-1\navigation\cache-bank-logo.png" class="h-8">
             </div>
+
+            <!-- NAV LINKS FOR WIDER VIEW -->
             <div class="hidden md:flex items-center justify-between gap-12 text-black">
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
+                <a href="#product" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
+                <a href="#features" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
+                <a href="#get-started" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
+                <a href="#contact" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
             </div>
+
+            <!-- LOGIN AND SIGNUP BUTTONS FOR WIDER VIEW -->
             <div class="hidden md:flex items-center gap-8 px-4">
                 <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
                 <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500 hover:text-white transition duration-300">Sign Up</button>
             </div>
 
+            <!-- BURGER MENU FOR MOBILE VIEW -->
             <button class="md:hidden p-4" id="mobile-menu-toggle">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6" fill="none">
                     <g clip-path="url(#clip0_429_11066)">
@@ -43,11 +48,12 @@
                 </svg>
             </button>
 
+            <!-- BURGER MENU NAVBAR -->
             <div class="hidden absolute flex md:hidden flex-col items-start shadow-main justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-4" id="mobile-menu">
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
+                <a href="#product" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Product</a>
+                <a href="#features" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Features</a>
+                <a href="#get-started" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Get Started</a>
+                <a href="#contact" class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900">Contact</a>
                 <button class="flex items-center px-4 py-2 text-sm font-normal text-black">Log In</button>
                 <button class="flex items-center px-4 py-2 text-sm font-bold text-purple-blue-600 bg-purple-blue-100 rounded-xl hover:bg-purple-blue-600 hover:text-white transition duration-300">Sign Up</button>
             </div>
@@ -55,7 +61,7 @@
     </div>
 
     <!-- HERO -->
-    <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5 lg:px-32 px-12">
+    <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5 lg:px-32 px-12" id="product">
         <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
             <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
                 The Clever Place to Keep Your Cache
@@ -113,7 +119,7 @@
     </section>
 
     <!-- FEATURES -->
-    <div class="container mx-auto py-10 flex flex-col items-center justify-center">
+    <div class="container mx-auto py-10 flex flex-col items-center justify-center" id="features">
         <!-- HEADER SECTION -->
         <div class="flex flex-col items-center justify-center mt-12">
             <h1 class="mb-4 text-3xl lg:text-4xl font-extrabold text-dark-grey-900 text-center">
@@ -242,7 +248,7 @@
     </div>
 
     <!-- GETTING STARTED -->
-    <div class="w-full">
+    <div class="w-full" id="get-started">
         <div class="container flex flex-col items-center gap-16 mx-auto my-32">
             <div class="w-full grid grid-cols-1 gap-32 lg:grid-cols-2">
                 <!-- IMAGE -->
@@ -299,7 +305,7 @@
     </div>
 
     <!-- CONTACT -->
-    <div class="w-full">
+    <div class="w-full" id="contact">
         <div class="container flex flex-col items-center gap-16 mx-auto my-32">
             <div class="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 <!-- CARD 1 -->
@@ -402,7 +408,7 @@
     </div>
 
 
-
+    <!-- BURGER MENU FUNCTIONALITY -->
     <script>
         document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
             document.getElementById("mobile-menu").classList.toggle("hidden");
